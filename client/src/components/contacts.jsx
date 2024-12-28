@@ -9,7 +9,7 @@ const Contact = ({ listing }) => {
   useEffect(() => {
     const fetchLandlord = async () => {
       try {
-        const res = await fetch(`${process.env.BACKEND_URL}/api/user/${listing.userRef}`);
+        const res = await fetch(`https://himanshuujha-xenon-website-assignment.onrender.com/api/user/${listing.userRef}`);
         const data = await res.json();
         if (data.success === false) {
           return;

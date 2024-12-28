@@ -53,7 +53,7 @@ export default function Search() {
       setLoading(true);
       setShowMore(false);
       const searchQuery = urlParams.toString();
-      const res = await fetch(`http://localhost:5000/api/listing/get?${searchQuery}`);
+      const res = await fetch(`https://himanshuujha-xenon-website-assignment.onrender.com/api/listing/get?${searchQuery}`);
       const data = await res.json();
       if (data.length > 8) {
         setShowMore(true);

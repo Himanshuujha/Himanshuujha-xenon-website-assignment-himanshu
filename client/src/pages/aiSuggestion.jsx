@@ -8,7 +8,7 @@ const AiSuggestions = () => {
   useEffect(() => {
     const fetchAiSuggestions = async () => {
       try {
-        const aiSuggest = await fetch("http://localhost:5000/api/listing/ai");
+        const aiSuggest = await fetch("https://himanshuujha-xenon-website-assignment.onrender.com/api/listing/ai");
         const data = await aiSuggest.json();
         setListing(data);
         console.log(data);

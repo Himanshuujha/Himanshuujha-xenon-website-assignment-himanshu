@@ -30,7 +30,7 @@ const UpdateListing = () => {
   useEffect(() => {
     const fetchListing = async () => {
       const listingId = params.listingId;
-      const res = await fetch(`/api/listing/get/${listingId}`);
+      const res = await fetch(`https://himanshuujha-xenon-website-assignment.onrender.com/api/listing/get/${listingId}`);
       const data = await res.json();
 
       if (data.success === false) {
@@ -53,7 +53,7 @@ const UpdateListing = () => {
         formDataToSend.append("images", files[i]);
       }
 
-      fetch("/api/listing/upload-images", {
+      fetch("https://himanshuujha-xenon-website-assignment.onrender.com/api/listing/upload-images", {
         method: "POST",
         body: formDataToSend,
       })
@@ -130,7 +130,7 @@ const UpdateListing = () => {
       setLoading(true);
       setError(false);
 
-      const res = await fetch(`/api/listing/update/${params.listingId}`, {
+      const res = await fetch(`https://himanshuujha-xenon-website-assignment.onrender.com/api/listing/update/${params.listingId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
